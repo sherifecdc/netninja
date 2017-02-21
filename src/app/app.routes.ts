@@ -5,7 +5,7 @@ import { ListComponent } from "./list/list.component";
 
 export const APP_ROUTES:Routes = [
     {path:'', component:HomeComponent},
-    {path:'list', component:ListComponent}
+    {path:'list/:ninja', component:ListComponent}
 ];
 
 export const App_Routing = RouterModule.forRoot(APP_ROUTES);
