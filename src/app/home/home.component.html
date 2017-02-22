@@ -1,3 +1,22 @@
 <p>
   home works! SHerif
 </p>
+
+
+<p [ngClass]="classes"> ngclasss exmaple </p>
+
+<p *ngIf = "Iftest">*ngIf sample true </p>
+
+
+<p> Ninja Lsiting </p>
+<ul id = "ninja-listing">
+  <li *ngFor = "let ninja of ninjas">
+  {{ninja.name}} has {{ninja.belt}} belt
+   </li>
+</ul>
+
+<style>
+.red{color: darkred}
+.blue{color:blue}
+.underline{text-decoration: underline}
+</style>
