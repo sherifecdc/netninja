@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { LoggingService } from '../logging.service';
 
 @Component({
   selector: 'app-list',
@@ -8,16 +9,23 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ListComponent implements OnInit {
 
+ ninja: string;
+// logger: LoggingService;
+
  ninjas = [
     {name:"Sherif",belt:"black"},
     {name:"Asad",belt:"red"},
     {name:"Hero",belt:"blue"}
   ];
 
-  ninja: string;
-
-  constructor(private route: ActivatedRoute) { 
+  constructor(private route: ActivatedRoute,
+    private logger: LoggingService) 
+  { 
     this.ninja = route.snapshot.params['ninja'];
+  }
+
+ logIt(){
+   this.logger.log();
   }
 
   ngOnInit() {

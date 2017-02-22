@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoggingService } from '../logging.service';
 
 @Component({
   selector: 'app-home',
@@ -10,9 +11,14 @@ export class HomeComponent implements OnInit {
   classes = {'red':true, 'underline': true, 'blue':false};
   Iftest = true;
 
-  constructor() { }
+  constructor(private logger: LoggingService) { }
 
   ngOnInit() {
   }
+
+   logIt(){
+   this.logger.log();
+  }
+
 
 }

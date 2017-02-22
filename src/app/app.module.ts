@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { App_Routing } from './app.routes';
 import { NinjaFilterPipe } from './ninja-filter.pipe';
+import { LoggingService} from './logging.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { NinjaFilterPipe } from './ninja-filter.pipe';
     HttpModule,
     App_Routing
   ],
-  providers: [],
+  providers: [LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

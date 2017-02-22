@@ -12,8 +12,9 @@
        <span [ngStyle]="{background: ninja.belt}"> {{ninja.belt}} belt </span>
        <h3>  {{ninja.name | uppercase}} </h3>
     </div>
-
    </li>
 </ul>
+
+<button (click)="logIt()"> Log me </button>
 
 activatedRoute.snapshot.params['ninja'] = {{ninja}}
