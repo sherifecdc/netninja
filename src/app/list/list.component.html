@@ -1,7 +1,16 @@
-<p>
-  list works!
-</p>
+<p> Ninja Lisiting :</p>
 
-activatedRoute.snapshot.params['nija'] = {{ninja}}
+<ul id = "ninja-listing">
+  <li *ngFor = "let ninja of ninjas">
+    <div class="single-ninja">
+      <!-- ninja-belt background color-->
+       <span [ngStyle]="{background: ninja.belt}"> {{ninja.belt}} belt </span>
+       <h3>  {{ninja.name}} </h3>
+    </div>
+
+   </li>
+</ul>
+
+activatedRoute.snapshot.params['ninja'] = {{ninja}}
 
 

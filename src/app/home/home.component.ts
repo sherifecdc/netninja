@@ -7,12 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-
-  ninjas = [
-    {"name":"Sherif","belt":"black"},
-    {"name":"Asad","belt":"red"},
-    {"name":"Hero","belt":"blue"}
-  ];
   classes = {'red':true, 'underline': true, 'blue':false};
   Iftest = true;
 

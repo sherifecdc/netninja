@@ -8,6 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ListComponent implements OnInit {
 
+ ninjas = [
+    {name:"Sherif",belt:"black"},
+    {name:"Asad",belt:"red"},
+    {name:"Hero",belt:"blue"}
+  ];
+
   ninja: string;
 
   constructor(private route: ActivatedRoute) { 
