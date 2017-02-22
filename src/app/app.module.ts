@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { App_Routing } from './app.routes';
+import { NinjaFilterPipe } from './ninja-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ListComponent
+    ListComponent,
+    NinjaFilterPipe
   ],
   imports: [
     BrowserModule,

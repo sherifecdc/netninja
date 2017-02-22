@@ -1,16 +1,19 @@
 <p> Ninja Lisiting :</p>
 
+<form id="filter">
+  <label> Filter Ninjas by Name:</label>
+  <input type="text" [(ngModel)]="term" [ngModelOptions]="{standalone:true}"/>
+</form>
+
 <ul id = "ninja-listing">
-  <li *ngFor = "let ninja of ninjas">
+  <li *ngFor = "let ninja of ninjas | ninjaFilter:term">
     <div class="single-ninja">
       <!-- ninja-belt background color-->
        <span [ngStyle]="{background: ninja.belt}"> {{ninja.belt}} belt </span>
-       <h3>  {{ninja.name | uppercase | slice:1:3}} </h3>
+       <h3>  {{ninja.name | uppercase}} </h3>
     </div>
 
    </li>
 </ul>
 
 activatedRoute.snapshot.params['ninja'] = {{ninja}}
-
-
