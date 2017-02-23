@@ -15,6 +15,16 @@
    </li>
 </ul>
 
-<button (click)="logIt()"> Log me </button>
+<form id="add-ninja">
+  <input type="text" [(ngModel)]="name" name="fname"/>
+  <input type="text" [(ngModel)]="belt" [ngModelOptions]="{standalone: true}" />
+  <button (click)="fbPostData(name, belt)"> Add Ninja </button>
+</form>
 
+<!--
+name="fname"
+[ngModelOptions]="{standalone: true}"
+
+<button (click)="logIt()"> Log me </button>
 activatedRoute.snapshot.params['ninja'] = {{ninja}}
+-->
