@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LoggingService } from '../logging.service';
 import { DataService } from '../data.service';
+declare var firebase: any;
 
 @Component({
   selector: 'app-list',
@@ -26,11 +27,23 @@ export class ListComponent implements OnInit {
    this.logger.log();
   }
 
-// to ensure the component is loaded before the service
   ngOnInit() {
+    // to ensure the component is loaded before the service
+    /*
     this.dataService.fetchData().subscribe(
       (data) => this.ninjas = data.json()
     );
+    */
+
+    this.fbGetData();
+  }
+
+  fbGetData() {
+    firebase.database().ref('/').on('child_added', 
+      (snapshot) => //console.log(snapshot.val()))
+      {
+          this.ninjas.push(snapshot.val());
+       })
   }
 
 }
